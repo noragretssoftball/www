@@ -11,7 +11,7 @@ extends(src='layout.sgr')
           th game 1
           th game 2
       tbody
-        tr 
+        tr.game 
           td 8/24 thursday
           td 8:30
           td field 2
