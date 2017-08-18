@@ -1,29 +1,68 @@
 extends(src='layout.sgr')
   block(name='content')
-    h2 Hello World!
-    p(retext-skip) Thanks for using <a href='https://github.com/static-dev/spike'>spike</a>
-    p Example of locals: {{ foo }}
-    p(mdi) Example of **markdown**
-    p Example of "smart quotes" -- and dashes
 
-    hr
-
-    h3 Getting Started
-    h4 The Stack:
-    ul
-      li
-        a(href="http://github.com/reshape/reshape") reshape
-        |  for HTML transforms
-      li
-        a(href="https://babeljs.io/") babel
-        |  for JS transforms
-      li
-        a(href="http://postcss.org/") postcss
-        |  for CSS transforms
-      li
-        a(href="http://webpack.github.io") webpack
-        |  for JS bundling
-
-    p Customize your settings by editing the
-      a(href="https://spike.readme.io/docs/appjs") app.js
-      |  file or simply start by editing this view
+    table
+      thead
+        tr
+          th date 
+          th time
+          th field
+          th opponent
+          th game 1
+          th game 2
+      tbody
+        tr 
+          td 8/24 thursday
+          td 8:30
+          td field 2
+          td salted nuts
+        tr 
+          td 9/1 friday
+          td 6:30
+          td field 1
+          td MD mallet warriors
+        tr 
+          td 9/8 friday
+          td 6:30
+          td field 2
+          td we got the runs
+        tr 
+          td 9/15 friday
+          td 6:30
+          td field 3
+          td bandits
+        tr 
+          td 9/21 thursday
+          td 8:30
+          td field 2
+          td ball hawgs 
+        tr 
+          td 9/29 friday
+          td 8:30
+          td field 2
+          td war chickens
+        tr 
+          td 10/6 friday
+          td 6:30
+          td field 1
+          td ACC masonry
+        tr 
+          td 10/13 friday
+          td 8:30
+          td field 1
+          td just for fun
+        tr 
+          td 10/20 friday
+          td 8:30
+          td field 3
+          td bohs and ho's
+        tr 
+          td 10/27 friday
+          td 8:30
+          td field 1
+          td gettin' dirty
+        tr 
+          td 11/3 friday
+          td 6:30
+          td field 1
+          td hot 'n bothered
