@@ -8,6 +8,7 @@
   },
   "bugs": "https://github.com/asasmith/no-ragrets-softball/issues",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "reshape-standard": "^3.0.0",
     "spike": "^2.0.0",
     "spike-css-standards": "^3.0.0",
