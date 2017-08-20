@@ -1,9 +1,33 @@
 #index
-  
-  & table
-    width: 100%
 
-    & tbody
-      
-      & td
-        text-align: center
+  & #schedule_wrapper
+    width: 95%
+    margin: 2em auto
+  
+    & ul
+      display: flex
+      font-size: .8em
+      text-transform: capitalize
+
+      & li
+        flex: 1 1 calc(100% / 7)
+
+        &:nth-of-type(n+2)
+          text-align: center
+
+        @media (max-width: 25.875em)
+          &:nth-of-type(n+5)
+            display: none
+
+    & #header
+      padding: .5em
+      color: white
+      background-color: var(--teamOrange)
+      font-size: 1em
+
+    & .game
+      padding: .5em
+
+      &:nth-of-type(odd)
+        background-color: whitesmoke
+
