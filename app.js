@@ -4,7 +4,9 @@ const jsStandards = require('spike-js-standards')
 const pageId = require('spike-page-id')
 const sugarml = require('sugarml')
 const sugarss = require('sugarss')
+const SpikeDatoCMS = require('spike-datocms')
 const env = process.env.SPIKE_ENV
+const locals = {}
 
 module.exports = {
   devtool: 'source-map',
@@ -12,7 +14,10 @@ module.exports = {
   ignore: ['**/layout.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
   reshape: htmlStandards({
     parser: sugarml,
-    locals: (ctx) => { return { pageId: pageId(ctx), foo: 'bar' } },
+    locals: (ctx) => { return Object.assign(
+      locals,
+      { pageId: pageId(ctx) }
+    )},
     minify: env === 'production'
   }),
   postcss: cssStandards({
@@ -21,5 +26,18 @@ module.exports = {
     warnForDuplicates: env !== 'production'
   }),
   babel: jsStandards(),
-  server: { open: false }
+  server: { open: false },
+  plugins: [
+    new SpikeDatoCMS ({
+      addDataTo: locals,
+      token: '8ea4a0a71742a4fe364eec58a2de93',
+      models: [
+        {
+          name: 'game',
+          json: 'games.json'
+        }
+      ],
+      json: 'data.json'
+    })
+  ]
 }
